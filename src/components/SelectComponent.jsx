@@ -1,24 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
-import { colors } from "../constants";
+import Select from "react-select";
 
-export default function List({ items }) {
+const colourOptions = [
+  { value: "ocean", label: "Ocean", color: "#00B8D9", isFixed: true },
+  { value: "blue", label: "Blue", color: "#0052CC", isDisabled: true },
+  { value: "purple", label: "Purple", color: "#5243AA" },
+  { value: "red", label: "Red", color: "#FF5630", isFixed: true },
+  { value: "orange", label: "Orange", color: "#FF8B00" },
+  { value: "yellow", label: "Yellow", color: "#FFC400" },
+  { value: "green", label: "Green", color: "#36B37E" },
+  { value: "forest", label: "Forest", color: "#00875A" },
+  { value: "slate", label: "Slate", color: "#253858" },
+  { value: "silver", label: "Silver", color: "#666666" },
+];
+
+const List = ({ items }) => {
+  const [isClearable, setIsClearable] = useState(true);
+  const [isSearchable, setIsSearchable] = useState(true);
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isRtl, setIsRtl] = useState(false);
+
   return (
-    <div className="relative w-full lg:max-w-sm">
-      <select
-        className="w-full p-2.5 text-white bg-white border rounded-md shadow-sm outline-none appearance-none "
-        style={{ backgroundColor: colors.sectinBg }}
-      >
-        {items.map((item, index) => {
-          return (
-            <option value={item} key={index}>
-              <CheckCircleOutlineOutlinedIcon />
-
-              {item}
-            </option>
-          );
-        })}
-      </select>
-    </div>
+    <>
+      <Select
+        className="basic-single"
+        classNamePrefix="select"
+        defaultValue={colourOptions[0]}
+        name="color"
+        options={colourOptions}
+      />
+    </>
   );
-}
+};
+
+export default List;

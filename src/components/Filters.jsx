@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { colors, industries, risk, marketCap } from "../constants";
 import Grid from "@mui/material/Grid";
 
 import { makeStyles } from "@mui/styles";
-import DropDownListComponent from "./DropDownList";
+
 import ButtonComponent from "./ButtonComponent";
-import List from "./SelectComponent";
+import List from "./List";
+import InputList from "./InputList";
 
 const useStyles = makeStyles({
   filtersContianer: {
@@ -23,8 +24,16 @@ const useStyles = makeStyles({
     textAlign: "center",
   },
 });
+
 const Filters = () => {
+  const [apply, setapply] = useState(false);
   const classes = useStyles();
+
+  const handlApply = () => {
+    setapply(true);
+    console.log("apply");
+  };
+  console.log(apply);
   return (
     <Grid item container className={classes.filtersContianer}>
       <Grid item xs={12}>
@@ -32,20 +41,20 @@ const Filters = () => {
       </Grid>
       <Grid item xs={12} marginBottom={3}>
         <h5>Industry</h5>
-        <List items={industries} />
+        <List items={industries} apply={apply} />
         <h5>Choose something</h5>
       </Grid>
       <Grid item xs={12} marginBottom={3}>
         <h5>Market Cap</h5>
-        <DropDownListComponent items={marketCap} />
+        <List items={marketCap} />
         <h5>Press Apply to see changes.</h5>
       </Grid>
       <Grid item xs={12} marginBottom={3}>
         <h5>Risk</h5>
-        <DropDownListComponent items={risk} />
+        <InputList items={risk} />
       </Grid>
       <Grid item xs={12} marginTop={3}>
-        <ButtonComponent />
+        <ButtonComponent handlApply={handlApply} />
       </Grid>
     </Grid>
   );
