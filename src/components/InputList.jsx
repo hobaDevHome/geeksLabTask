@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
-import { colors, industries, risk, marketCap } from "../constants";
+import { colors } from "../constants";
 import stack from "../images/stack.png";
 import { makeStyles } from "@mui/styles";
 import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";

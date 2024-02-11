@@ -11,7 +11,6 @@ const useStyles = makeStyles({
   itemContainer: {
     backgroundColor: colors.aleterBg,
     borderRadius: 12,
-
     border: `1px solid #D5D5D5`,
     padding: "10px 24px",
     color: "white",

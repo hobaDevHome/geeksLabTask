@@ -1,5 +1,4 @@
 import React from "react";
-import soon from "../images/soon.jpg";
 const Portfolio = () => {
   return (
     <div

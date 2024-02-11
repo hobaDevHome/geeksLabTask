@@ -1,5 +1,5 @@
 import React from "react";
-import { colors, industries, risk, marketCap } from "../constants";
+import { industries, risk, marketCap } from "../constants";
 import Grid from "@mui/material/Grid";
 
 import { makeStyles } from "@mui/styles";
