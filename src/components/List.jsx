@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   listContainer: {
     backgroundColor: colors.Bg,
     fontFamily: "Poppins",
-    color: "#D9D9D9",
+    color: "#a3a3a3",
     fontSize: 12,
     display: "felx",
     width: "100%",

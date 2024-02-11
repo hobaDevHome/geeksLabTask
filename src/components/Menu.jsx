@@ -42,7 +42,7 @@ const useStyles = makeStyles({
     borderRadius: 14,
     padding: "0px 5px",
     fontSize: 11,
-    top: 2,
+    top: 0,
   },
 });
 
@@ -54,7 +54,11 @@ function MenuB() {
     <Grid
       container
       alignItems="center"
-      style={{ backgroundColor: colors.sectinBg, borderRadius: 19 }}
+      style={{
+        backgroundColor: colors.sectinBg,
+        borderRadius: 19,
+        padding: "8px",
+      }}
       display={"flex"}
       justifyContent="space-around"
     >

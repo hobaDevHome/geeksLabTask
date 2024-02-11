@@ -15,7 +15,7 @@ const Button = styled(BaseButton)(
   line-height: 1.5;
   width: 100%;
   background-color: ${colors.Buttons};
-  padding: 10px 16px;
+  padding: 13px 16px;
   border-radius: 8px;
   color: white;
   transition: all 150ms ease;

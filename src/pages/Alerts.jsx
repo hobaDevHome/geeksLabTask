@@ -39,7 +39,6 @@ const Alerts = () => {
         className={classes.column}
         marginLeft={2.5}
         justifyContent={"start"}
-        // sx={{ border: "1px solid white" }}
       >
         <Filters />
       </Grid>
