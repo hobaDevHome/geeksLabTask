@@ -26,7 +26,8 @@ const Alerts = () => {
       style={{ backgroundColor: colors.sectinBg, borderRadius: 19 }}
       display={"flex"}
       flexDirection={{ xs: "column", sm: "column", md: "row" }}
-      padding={2}
+      padding={{ xs: 0, sm: 0.5, md: 2 }}
+      marginLeft={{ xs: 0, sm: 0.5, md: 2 }}
       marginTop={1}
       marginBottom={1}
       alignItems={"start"}
@@ -37,9 +38,10 @@ const Alerts = () => {
         xs={12}
         md={2.5}
         className={classes.column}
-        marginLeft={2.5}
         justifyContent={"start"}
         marginTop={2}
+        padding={{ xs: 1, sm: 1, md: 2 }}
+        marginLeft={{ xs: 1, sm: 1, md: 2.5 }}
       >
         <Filters />
       </Grid>
@@ -53,6 +55,7 @@ const Alerts = () => {
         marginLeft={3}
         justifyContent={"start"}
         marginTop={2}
+        marginRight={{ xs: 1, sm: 1, md: 1.5 }}
       >
         {altersData.map((alert, index) => {
           return <AlertItem key={index} data={alert} />;
