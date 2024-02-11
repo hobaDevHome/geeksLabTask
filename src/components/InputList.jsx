@@ -29,9 +29,10 @@ const useStyles = makeStyles({
     padding: "8px 4px",
   },
   option: {
-    "display": "flex",
-    "flexDirection": "row",
-    "padding": "10px 4px",
+    display: "flex",
+    flexDirection: "row",
+    padding: "10px 4px",
+    cursor: "pointer",
     "&:hover": {
       backgroundColor: "white",
       borderRadius: 10,
@@ -44,7 +45,7 @@ const useStyles = makeStyles({
 const InputList = ({ items }) => {
   const [isOpened, setIsopnend] = useState(false);
   const [searchprase, setSearchprase] = useState("");
-  const [selectedOption, setSelectedOption] = useState(items[0]);
+
   const [optionsList, setOptionsList] = useState([...items]);
 
   const classes = useStyles();
@@ -77,7 +78,11 @@ const InputList = ({ items }) => {
         className={classes.listHeader}
         onClick={() => setIsopnend(!isOpened)}
       >
-        <img src={stack} alt="select" style={{ marginRight: 10 }} />
+        <img
+          src={stack}
+          alt="select"
+          style={{ marginRight: 10, width: 14, height: 14 }}
+        />
         <div
           style={{
             display: "flex",

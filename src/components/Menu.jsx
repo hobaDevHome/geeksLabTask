@@ -21,11 +21,11 @@ const useStyles = makeStyles({
     position: "relative",
   },
   menuItemLargeText: {
-    "fontSize": 30,
-    "fontFamily": "Inter",
-    "fontWeight": "bold",
+    fontSize: 30,
+    fontFamily: "Inter",
+    fontWeight: "bold",
 
-    "padding": 10,
+    padding: 10,
     "&:hover": {
       color: "white",
     },
@@ -66,7 +66,7 @@ function MenuB() {
         <Link
           to={"/trading"}
           className={classes.menuItemLarge}
-          style={{ color: selected === 0 ? "white" : colors.dimmed }}
+          style={{ color: selected === 0 ? "white" : "#48484830" }}
           onClick={() => setselected(0)}
         >
           <div className={classes.comingSoon}>coming soon</div>
@@ -85,7 +85,7 @@ function MenuB() {
         <Link
           to={"/automation"}
           className={classes.menuItemLarge}
-          style={{ color: selected === 1 ? "white" : colors.dimmed }}
+          style={{ color: selected === 1 ? "white" : "#48484830" }}
           onClick={() => setselected(1)}
         >
           <div className={classes.comingSoon}>coming soon</div>
@@ -104,7 +104,7 @@ function MenuB() {
         <Link
           to={"/portfolio"}
           className={classes.menuItemLarge}
-          style={{ color: selected === 2 ? "white" : colors.dimmed }}
+          style={{ color: selected === 2 ? "white" : "#48484830" }}
           onClick={() => setselected(2)}
         >
           <div className={classes.comingSoon}>coming soon</div>
@@ -122,7 +122,7 @@ function MenuB() {
         <Link
           to={"/"}
           className={classes.menuItemLarge}
-          style={{ color: selected === 3 ? "white" : colors.dimmed }}
+          style={{ color: selected === 3 ? "white" : "#48484830" }}
           onClick={() => setselected(3)}
         >
           <div className={classes.menuItemLargeText}>Alerts</div>
@@ -140,7 +140,7 @@ function MenuB() {
         <Link
           to={"/training"}
           className={classes.menuItemLarge}
-          style={{ color: selected === 4 ? "white" : colors.dimmed }}
+          style={{ color: selected === 4 ? "white" : "#48484830" }}
           onClick={() => setselected(4)}
         >
           <div className={classes.menuItemLargeText}>Training</div>

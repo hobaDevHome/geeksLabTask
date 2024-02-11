@@ -39,6 +39,7 @@ const Alerts = () => {
         className={classes.column}
         marginLeft={2.5}
         justifyContent={"start"}
+        marginTop={2}
       >
         <Filters />
       </Grid>
@@ -51,6 +52,7 @@ const Alerts = () => {
         paddingLeft={1}
         marginLeft={3}
         justifyContent={"start"}
+        marginTop={2}
       >
         {altersData.map((alert, index) => {
           return <AlertItem key={index} data={alert} />;

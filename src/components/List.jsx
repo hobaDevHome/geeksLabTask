@@ -21,6 +21,7 @@ const useStyles = makeStyles({
     flexDirection: "row",
     padding: "8px 12px",
     cursor: "pointer",
+    alignItems: "center",
   },
   optionsContainer: {
     border: `1px solid white`,
@@ -29,9 +30,10 @@ const useStyles = makeStyles({
     padding: "8px 4px",
   },
   option: {
-    "display": "flex",
-    "flexDirection": "row",
-    "padding": "10px 4px",
+    display: "flex",
+    flexDirection: "row",
+    padding: "10px 4px",
+    cursor: "pointer",
     "&:hover": {
       backgroundColor: "white",
       borderRadius: 10,
@@ -57,7 +59,11 @@ const List = ({ items }) => {
         className={classes.listHeader}
         onClick={() => setIsopnend(!isOpened)}
       >
-        <img src={stack} alt="select" style={{ marginRight: 10 }} />
+        <img
+          src={stack}
+          alt="select"
+          style={{ marginRight: 10, width: 14, height: 14 }}
+        />
         <div
           style={{
             display: "flex",
